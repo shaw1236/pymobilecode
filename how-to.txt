@@ -1,0 +1,37 @@
+-- Folder structure:
+setup.py
+README.md
+LICENSE
+pymobilecode/__init__.py
+            MobileCode.py
+
+-- Module required: pip, wheel, twine, keyring
+
+-- keyring
+pip install --user keyring
+$keyring set https://test.pypi.org/legacy/ your-username
+$keyring set https://upload.pypi.org/legacy/ your-usernam
+
+-- Step
+$python setup.py sdist bdist_wheel
+$python -m twine upload --skip-existing --verbose --repository-url https://test.pypi.org/legacy/ dist/*
+$pip install --index-url https://test.pypi.org/simple/ --no-deps pymonbilecode-shaw1236
+
+-- Check 
+https://test.pypi.org/project/pymobilecode-shaw1236/<version>/
+C:\Python38\Lib\site-packages\pymobilecode
+$python
+$from pymobilecode.MobileCode import MobileCode
+$mobileCode = MobileCode(8)
+$mobile.add("12345678")
+
+-- Live
+$python -m twine upload dist/*
+$pip install pymobilecode-shaw1236
+
+-- Reference
+https://packaging.python.org/tutorials/packaging-projects/
+https://pypi.org/project/twine/
+https://test.pypi.org/project
+https://pypi.org/project
+© 2019 GitHub, Inc.
