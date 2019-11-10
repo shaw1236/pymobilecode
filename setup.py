@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pymobilecode-shaw1236", # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     author="Simon Li",
     author_email="shaw1236@gmail.com",
     description="A utility for mobile code",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/shaw1236/pyworkshop",
+    url="https://github.com/shaw1236/pymobilecode",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
